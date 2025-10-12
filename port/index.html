@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+<<<<<<< HEAD
+=======
+    <base href="https:/cdn.jsdelivr.net/gh/InsayneBoko/LightnersLivePlus@latest/port/">
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>Deltarune Lightners Live</title>
@@ -90,12 +94,21 @@ body {
 	z-index: 1;
 }
 		</style>
+<<<<<<< HEAD
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="LightnersLivePlus.icon.png" />
 <link rel="apple-touch-icon" href="LightnersLivePlus.apple-touch-icon.png"/>
 
 	</head>
 	<body>
 		<script>
+=======
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="Deltarune Lightners Live.icon.png" />
+<link rel="apple-touch-icon" href="Deltarune Lightners Live.apple-touch-icon.png"/>
+
+	</head>
+	<body>
+    	<script>
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
 			const originalFetch = window.fetch;
 
 function mergeFiles(fileParts) {
@@ -129,6 +142,7 @@ function getParts(file, start, end) {
     return parts;
 }
 Promise.all([
+<<<<<<< HEAD
     mergeFiles(getParts("LightnersLivePlus.pck", 1, 8)),
     mergeFiles(getParts("LightnersLivePlus.wasm", 1, 2))
 ]).then(([pckUrl, wasmUrl]) => {
@@ -136,12 +150,25 @@ Promise.all([
         if (url.endsWith("LightnersLivePlus.pck")) {
             return originalFetch(pckUrl, ...args);
         } else if (url.endsWith("LightnersLivePlus.wasm")) {
+=======
+    mergeFiles(getParts("Deltarune Lightners Live.pck", 1, 8)),
+    mergeFiles(getParts("Deltarune Lightners Live.side.wasm", 1, 3))
+]).then(([pckUrl, wasmUrl]) => {
+    window.fetch = async function (url, ...args) {
+        if (url.endsWith("Deltarune Lightners Live.pck")) {
+            return originalFetch(pckUrl, ...args);
+        } else if (url.endsWith("Deltarune Lightners Live.side.wasm")) {
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
             return originalFetch(wasmUrl, ...args);
         } else {
             return originalFetch(url, ...args);
         }
     };
+<<<<<<< HEAD
     window.godotRunStart = run
+=======
+    window.godotRunStart = run;
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
 });
 		</script>
 		<canvas id="canvas">
@@ -153,14 +180,24 @@ Promise.all([
 		</noscript>
 
 		<div id="status">
+<<<<<<< HEAD
 			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="LightnersLivePlus.png" alt="">
+=======
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="Deltarune Lightners Live.png" alt="">
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
+<<<<<<< HEAD
 		<script src="LightnersLivePlus.js"></script>
 		<script>
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"LightnersLivePlus","experimentalVK":false,"fileSizes":{"LightnersLivePlus.pck":159416824,"LightnersLivePlus.wasm":36160334},"focusCanvas":true,"gdextensionLibs":["libgodotmidi.web.template_release.wasm32.wasm"],"godotPoolSize":4};
+=======
+		<script src="Deltarune Lightners Live.js"></script>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"Deltarune Lightners Live","experimentalVK":false,"fileSizes":{"Deltarune Lightners Live.pck":159416824,"Deltarune Lightners Live.wasm":1588912},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 

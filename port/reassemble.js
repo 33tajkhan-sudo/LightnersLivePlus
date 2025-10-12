@@ -31,6 +31,7 @@ function getParts(file, start, end) {
     return parts;
 }
 Promise.all([
+<<<<<<< HEAD
     mergeFiles(getParts("LightnersLivePlus.pck", 1, 8)),
     mergeFiles(getParts("LightnersLivePlus.wasm", 1, 2))
 ]).then(([pckUrl, wasmUrl]) => {
@@ -38,6 +39,15 @@ Promise.all([
         if (url.endsWith("LightnersLivePlus.pck")) {
             return originalFetch(pckUrl, ...args);
         } else if (url.endsWith("LightnersLivePlus.wasm")) {
+=======
+    mergeFiles(getParts("Deltarune Lightners Live.pck", 1, 8)),
+    mergeFiles(getParts("Deltarune Lightners Live.side.wasm", 1, 3))
+]).then(([pckUrl, wasmUrl]) => {
+    window.fetch = async function (url, ...args) {
+        if (url.endsWith("Deltarune Lightners Live.pck")) {
+            return originalFetch(pckUrl, ...args);
+        } else if (url.endsWith("Deltarune Lightners Live.side.wasm")) {
+>>>>>>> parent of 1802f1a (oopsie, gotta restart again (kms))
             return originalFetch(wasmUrl, ...args);
         } else {
             return originalFetch(url, ...args);
