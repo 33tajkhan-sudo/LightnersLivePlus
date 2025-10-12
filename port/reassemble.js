@@ -37,7 +37,7 @@ Promise.all([
     window.fetch = async function (url, ...args) {
         if (url.endsWith("LightnersLivePlus.pck")) {
             return originalFetch(pckUrl, ...args);
-        } else if (url.endsWith("LightnersLivePlus.side.wasm")) {
+        } else if (url.endsWith("LightnersLivePlus2.wasm")) {
             return originalFetch(wasmUrl, ...args);
         } else {
             return originalFetch(url, ...args);
