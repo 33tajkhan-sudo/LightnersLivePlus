@@ -32,7 +32,7 @@ function getParts(file, start, end) {
 }
 Promise.all([
     mergeFiles(getParts("LightnersLivePlus.pck", 1, 8)),
-    mergeFiles(getParts("LightnersLivePlus.side.wasm", 1, 3))
+    mergeFiles(getParts("LightnersLivePlus2.wasm", 1, 3))
 ]).then(([pckUrl, wasmUrl]) => {
     window.fetch = async function (url, ...args) {
         if (url.endsWith("LightnersLivePlus.pck")) {
