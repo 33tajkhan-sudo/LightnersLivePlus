@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Port by InsayneBoko with big help from shortpie :D -->
 <html lang="en">
 	<head>
 		<base href="https://cdn.jsdelivr.net/gh/InsayneBoko/LightnersLivePlus@main/port/">
@@ -154,7 +155,7 @@ body {
             document.body.appendChild(s);
           });
         }).then(() => {
-          const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"LightnersLivePlus","experimentalVK":false,"fileSizes":{"LightnersLivePlus.pck":159377196,"LightnersLivePlus.wasm":1588912},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+          const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"LightnersLivePlus","experimentalVK":false,"fileSizes":{"LightnersLivePlus.pck":159377196,"LightnersLivePlus.wasm":1588912},"focusCanvas":true,"gdextensionLibs":["libgodotmidi.web.template_release"],"godotPoolSize":4};
           const GODOT_THREADS_ENABLED = false;
           const engine = new Engine(GODOT_CONFIG);
 
